@@ -1,5 +1,5 @@
 
--Draft README
+#Draft README
 
 This is a work in progress with a planned release to my CS languages class in the fall
 
@@ -13,7 +13,7 @@ that on their deliveable (perhaps as a plug-ing for Webpack: https://webpack.js.
 This project uses NPM as the taskrunner rather than something more sophisticated like Grunt (https://gruntjs.com/),
 Gulp (http://gulpjs.com/), or Gradle (https://gradle.org/). One of these tools may be more appropriate on a more complex project.
 
---Setting up projects: for project creators
+##Setting up projects: for project creators
 
 In order to set up a NodeJS/NPM-based project (where NodeJS is running the JavaScript tools, even if the
 target is a browser rather than NodeJS). The first step is to create a project directory with a package.json
@@ -47,7 +47,7 @@ prefer Nodepad++ (https://notepad-plus-plus.org/). You can use and IDE just for 
 an Eclipse distribution that has WTP pre-installed (such as Eclipse for Java EE) may be a reasonable approach as would using a
 one of the fine IDEs produced by JetBrains such as WebStorm (https://notepad-plus-plus.org/).
 
---If you are downloading via GitHub
+##If you are downloading via GitHub
 
 If you are downloading this via GitHub, you might just grab the ZIP file from ... or clone the project with the command
 ```bash
@@ -62,15 +62,7 @@ In the project directory, you can reconsitute the contents of the node_modules d
 npm install
 ```
 
-
-We then create three new directories. src will be where we place our ES6 JavaScript
-source code to be transpiled. The transpiler will put its output in the tmp directory
-which can be emptied before staring the transpile process to get rid of unwanted output
-generated from deleted source files.
-
-
-
-dist/index.html
+##dist/index.html
 
 ```html
 <!DOCTYPE html>
@@ -95,7 +87,7 @@ dist/index.html
 generate this by transpiling a (singlton) set of .js files from files in ./src into ./tmp and
 then "packing" them into the ./dist/bundle.js file. Here are the file to transpile:
 
-src/lib.js
+##src/lib.js
 
 ```javascript
 
@@ -182,9 +174,4 @@ module.exports = {
     }]
   }
 };
-```
-
-Add a line to package.json:
-```json
-"babel": "babel ./src/lib.js -o ./tmp/lib.js"
 ```
