@@ -1,8 +1,9 @@
 // webpack.config.js
 var path = require('path');
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/lib.js',
   output: {
+    library: 'lib',
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
@@ -10,8 +11,8 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loader: 'babel-loader',
-      query: {
-        presets: ['es2017']
+      options: {
+        presets: ['es2015', 'es2016', 'es2017']
       }
     },
     {

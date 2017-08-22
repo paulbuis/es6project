@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8">
   <title>es2015-project</title>
+  <script src="bundle.js"></script>
 </head>
 <body>
   <h1>Results</h1>
-
   <p>timesTwo(2) = <em id="result1"></em></p>
   <p>plusFive(2) = <em id="result2"></em></p>
-
-  <script src="bundle.js"></script>
+  <script>
+    document.getElementById('result1').textContent = lib.timesTwo(2);
+    document.getElementById('result2').textContent = lib.plusFive(2);
+  </script>
 </body>
