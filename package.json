@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "style": "./node_modules/.bin/jscs --preset=google src",
     "transpile": "babel src -d tmp --presets=es2017 --source-maps",
     "test": "live-server dist"
   },
@@ -18,6 +20,7 @@
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-es2017": "^6.24.1",
     "eslint": "^4.5.0",
+    "jscs": "^3.0.7",
     "live-server": "^1.2.0",
     "webpack": "^3.3.0"
   }
